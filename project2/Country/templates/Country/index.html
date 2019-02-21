@@ -1,0 +1,10 @@
+{% if all_states %}
+<h3>Here are my states</h3>
+	<ul>
+		{% for state in all_states %}
+		<li><a href="/Country/{{ state.id }}">{{ state.state_name }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<h3>You don't have any states</h3>
+{% endif %}
