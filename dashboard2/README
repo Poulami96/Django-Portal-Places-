@@ -1,6 +1,0 @@
-cd dashboard2
-source envd1/bin/activate
-cd news
-python views.py
-
-git(origin)
