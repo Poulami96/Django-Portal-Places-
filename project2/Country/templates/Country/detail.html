@@ -1,1 +1,16 @@
-{{ state }}
+<html>
+<body style="background-color:powderblue;">
+	<center>
+<img src="{{ state.Places_pic_link }}">
+
+<h1>{{ state.Places }}</h1>
+<h3>{{ state.state_name }}</h3>
+<ul>
+	{% for Capital in state.Capital_set.all %}
+		<li>{{ Capital.capital_name }}-{{ Capital.file_type }}</li>
+	{% endfor %}
+	
+</center>
+</ul>
+</body>
+</html>

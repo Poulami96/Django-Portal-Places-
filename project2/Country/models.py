@@ -11,9 +11,12 @@ class State(models.Model):
 	Places_pic_link=models.CharField(max_length=1000)
 
 	def __str__(self):
-		return self.state_name + '-'+ self.Places
+		return self.state_name + '-'+ self.Places+ '-'+ self.Places_pic_link
 
 class Capital(models.Model):
 	state=models.ForeignKey(State, on_delete=models.CASCADE)
 	file_type=models.CharField(max_length=10)
 	capital_name=models.CharField(max_length=250)
+
+	def __str__(self):
+		return self.file_type + '-'+ self.capital_name

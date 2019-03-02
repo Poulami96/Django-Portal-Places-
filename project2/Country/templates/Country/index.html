@@ -1,10 +1,15 @@
+<html>
+<body style="background-color:powderblue;">
 {% if all_states %}
-<h3>Here are my states</h3>
+<center><marquee><h1>Welcome to most awesome states</h1></center></marquee><h3>Select States</h3><br>
+	<h3>
 	<ul>
 		{% for state in all_states %}
-		<li><a href="/Country/{{ state.id }}">{{ state.state_name }}</a></li>
+		<li><a href="/Country/{{ state.id }}">{{ state.state_name }}</a><br><br><br></li>
 		{% endfor %}
-	</ul>
+	</ul></h3>
 {% else %}
 	<h3>You don't have any states</h3>
 {% endif %}
+</body>
+</html>
